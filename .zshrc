@@ -20,6 +20,9 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 
 source ~/.zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh
 
+autoload -U compinit; compinit
+source ${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/fzf-tab/fzf-tab.plugin.zsh
+
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 plugins=(
@@ -30,6 +33,7 @@ plugins=(
   zsh-syntax-highlighting
 )
 
+fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 source $ZSH/oh-my-zsh.sh
 
 # Preferred editor for local and remote sessions
@@ -70,3 +74,12 @@ source <(ng completion script)
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+#keybindings
+bindkey -e
+
+zstyle ':fzf-tab:*' fzf-command ftb-tmux-popup
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
+zstyle ':completion:*' menu no 
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath' 
