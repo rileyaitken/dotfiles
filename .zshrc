@@ -24,7 +24,6 @@ source ~/.zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 plugins=(
   git
-  docker
   common-aliases
   alias-tips
   zsh-autosuggestions  

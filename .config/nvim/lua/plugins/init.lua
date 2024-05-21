@@ -21,7 +21,8 @@ return {
    		ensure_installed = {
    			"lua-language-server", "stylua", --lua
    			"html-lsp", "css-lsp" , "prettier", --typescript
-        "pyright", "mypy", "black", "debugpy", "ruff-lsp"--python
+        "pyright", "mypy", "black", "debugpy", "ruff-lsp",--python
+        "rust-analyzer", --rust
    		},
    	},
    },
@@ -32,6 +33,7 @@ return {
    		ensure_installed = {
    			"vim", "lua", "vimdoc",
         "html", "css", "python",
+        "rust"
    		},
    	},
    },
