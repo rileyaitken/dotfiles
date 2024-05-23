@@ -53,6 +53,7 @@ mkcd() {mkdir -p -- "$@" && cd -- "$@"; }
 
 alias python="python3"
 alias cd="z"
+alias cdi="zi"
 alias ls="lsd"
 alias vi="nvim"
 alias config="/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"

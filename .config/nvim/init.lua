@@ -41,3 +41,6 @@ vim.schedule(function()
 end)
 
 vim.api.nvim_set_option("clipboard", "unnamed")
+
+require("catppuccin").setup()
+vim.cmd.colorscheme "catppuccin"
