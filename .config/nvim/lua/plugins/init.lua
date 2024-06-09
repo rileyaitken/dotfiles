@@ -36,7 +36,7 @@ return {
    	opts = {
    		ensure_installed = {
    			"lua-language-server", "stylua", --lua
-   			"html-lsp", "css-lsp" , "prettier", --typescript
+   			"html-lsp", "css-lsp" , "prettier", "angularls", "tsserver",--typescript
         "pyright", "mypy", "black", "debugpy", "ruff-lsp",--python
         "rust-analyzer", --rust
    		},
@@ -49,7 +49,7 @@ return {
    		ensure_installed = {
    			"vim", "lua", "vimdoc",
         "html", "css", "python",
-        "rust"
+        "rust", "javascript",
    		},
    	},
    },
@@ -108,5 +108,14 @@ return {
       'nvim-lua/plenary.nvim'
     }
   },
+
+  {
+    'stevearc/oil.nvim',
+    opts = {},
+    -- Optional dependencies
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+  },
+
+  { "nvim-treesitter/nvim-treesitter-angular" },
 
 }

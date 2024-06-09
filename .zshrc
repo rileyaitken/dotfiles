@@ -52,6 +52,7 @@ source $ZSH/oh-my-zsh.sh
 mkcd() {mkdir -p -- "$@" && cd -- "$@"; }
 
 alias python="python3"
+alias lg="lazygit"
 alias cd="z"
 alias cdi="zi"
 alias ls="lsd"
